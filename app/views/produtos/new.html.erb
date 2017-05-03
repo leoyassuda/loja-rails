@@ -1,0 +1,23 @@
+<div class="container container-top">
+
+	<%= form_for Produto.new do |f| %>
+		<div class="form-group">
+			<label for="inputNome">Nome</label>
+			<input type="text" name="produto[nome]" class="form-control" placeholder="Nome">
+		</div>
+		<div class="form-group">
+			<label for="inputDescricao">Descrição</label>
+			<textarea id="inputDescricao" name="produto[descricao]" class="form-control" rows="3"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="inputNome">Quantidade</label>
+			<input id="inputQuantidade"  name="produto[quantidade]" type="number" step="1" class="form-control" placeholder="Quantidade">
+		</div>
+		<div class="form-group">
+			<label for="inputNome">Preço</label>
+			<input id="inputPreco" name="produto[preco]" type="number" step="0.1" class="form-control" placeholder="Preço">
+		</div>
+		<button type="submit" class="btn btn-primary">Cadastrar</button>
+	<% end %>
+
+</div>

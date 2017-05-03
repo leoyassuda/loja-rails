@@ -1,0 +1,29 @@
+<div class="container container-top">
+	<div class="page-header">
+		<h1>Produtos <small>catalogo de produtos</small></h1>
+	</div>
+	<% aux = @cards_produtos.each_slice(3) %>
+	<% aux.each do |card_produto| %>
+	<div class="row">
+		<% card_produto.each do |produto| %>
+		<div class="col-sm-4 col-md-4">
+			<div class="card">
+				<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150" alt="Avatar" style="width:100%">
+				<div class="card-container">
+					<h4><b><%= produto.nome %></b></h4> 
+					<p><%= produto.descricao %></p>
+					<p><%= produto.preco %></p> 
+					<p><%= produto.quantidade %></p> 
+					<p>
+						<a href="#" class="btn btn-primary" role="button">Editar</a> 
+						<a href="#" class="btn btn-danger" role="button">Deletar</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+	<% end %>
+</div>
+
+<a href="/produtos/new" class="btn btn-success botao-widget" role="button">Novo</a> 
